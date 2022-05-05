@@ -4,7 +4,7 @@ ofstream fout;
 
 void Converter::convertNumericalValueToLetter(char currentNumber)
 {
-    fout.open("Converter.txt", ios::app);
+    fout.open("Converted.txt", ios::app);
 
     switch (currentNumber)
     {
@@ -53,11 +53,12 @@ void Converter::convertNumericalValueToLetter(char currentNumber, char nextNumbe
 
     if (!nextNumberValid)
     {
+        convertNumericalValueToLetter(currentNumber);
         return;
     }
     else
     {
-        fout.open("Converter.txt", ios::app);
+        fout.open("Converted.txt", ios::app);
 
         char *concatenatedString;
         concatenatedString = new char[3];
