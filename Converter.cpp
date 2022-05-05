@@ -54,6 +54,7 @@ void Converter::convertNumericalValueToLetter(char currentNumber, char nextNumbe
     if (!nextNumberValid)
     {
         convertNumericalValueToLetter(currentNumber);
+        convertNumericalValueToLetter(nextNumber);
         return;
     }
     else
